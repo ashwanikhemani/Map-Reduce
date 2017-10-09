@@ -28,6 +28,7 @@ public class JunitTestCoverage {
             String jname = null;
             String cname;
             int index;
+            // find the test name
             index = filePathString.indexOf("Test");
             jname = filePathString.substring(index);
             int idx = jname.indexOf("/");
