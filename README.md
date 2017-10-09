@@ -24,7 +24,15 @@ mvn emma:mvn emma:emma -Dmaven.emma.report.xml=true
 2. The JunitTestCoverage application is used to create a program using the map/reduce model for parallelizing software testing .
 
 JunitTestCoverage : This class results in mapping the line number of different classes with the junits they are covered by 
+
+The output of the MR will be the line number_classname t1 , t2 , t3 .... 
+
 JunitTestCoverageSorted : This class give the results sorted line of codes by the number of junit that cover them in descending order .
+
+The logic to give the sorted list of line of codes by the junit that cover them is that we append the total line coverage by reading 
+the information from the coverage report and then appending it to the value of mapper.
+
+The line coverage information was then used in reducer to sort the list .
 
 3. The above application was then tested on cloudera platform with hadoop installation using below steps :
 
@@ -168,11 +176,11 @@ Jcmd :
 The jcmd utility is used to send diagnostic command requests to the JVM, where these requests are useful for controlling Java Flight Recordings, troubleshoot, and diagnose JVM and Java Applications. It must be used on the same machine where the JVM is running, and have the same effective user and group identifiers that were used to launch the JVM.
 
 The below functionality to print thread contents was tested with jcmd : 
-•	Print all threads with stack traces
+ï¿½	Print all threads with stack traces
 jcmd <process id/main class> Thread.print
 
 Java Mission Control : 
-Java Mission Control (JMC) is a new JDK profiling and diagnostic tools platform for HotSpot JVM. It’s a tool suite basic monitoring, managing, and production time profiling and diagnostics with high performance. Java Mission Control minimizes the performance overhead that's usually an issue with profiling tools. 
+Java Mission Control (JMC) is a new JDK profiling and diagnostic tools platform for HotSpot JVM. Itï¿½s a tool suite basic monitoring, managing, and production time profiling and diagnostics with high performance. Java Mission Control minimizes the performance overhead that's usually an issue with profiling tools. 
 Java mission control was run for the driver program and data about memory and processor usage was captured 
 Command : jmc
 
