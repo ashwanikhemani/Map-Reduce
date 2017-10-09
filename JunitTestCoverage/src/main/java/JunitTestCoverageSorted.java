@@ -85,8 +85,8 @@ public class JunitTestCoverageSorted {
                 String[] elements = tmp.split("_");
                 int lc = Integer.parseInt(elements[1]);
                 test.put(elements[0], lc);
-                testMap=TestReducer.sortByValues(test);
             }
+            testMap=TestReducer.sortByValues(test);
             for (String val : testMap.keySet()) {
                 val = val + ",";
                 sb.append(val);
