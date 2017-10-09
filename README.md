@@ -1,4 +1,4 @@
-Documentation for Homework 2 : 
+----  Map - Reduce ---
 
 1 . Insturmentation of code using jacoco plugin for gradle and sbt :
 
@@ -44,7 +44,7 @@ hadoop jar jar_name.jar main_class \input
 4. The application was then tested on Amazon EMR platform to test the functionality .
 
 
--- documentation ends --
+-- end --
 
 
 Joda-Time
@@ -168,11 +168,11 @@ Jcmd :
 The jcmd utility is used to send diagnostic command requests to the JVM, where these requests are useful for controlling Java Flight Recordings, troubleshoot, and diagnose JVM and Java Applications. It must be used on the same machine where the JVM is running, and have the same effective user and group identifiers that were used to launch the JVM.
 
 The below functionality to print thread contents was tested with jcmd : 
-â€¢	Print all threads with stack traces
+•	Print all threads with stack traces
 jcmd <process id/main class> Thread.print
 
 Java Mission Control : 
-Java Mission Control (JMC) is a new JDK profiling and diagnostic tools platform for HotSpot JVM. Itâ€™s a tool suite basic monitoring, managing, and production time profiling and diagnostics with high performance. Java Mission Control minimizes the performance overhead that's usually an issue with profiling tools. 
+Java Mission Control (JMC) is a new JDK profiling and diagnostic tools platform for HotSpot JVM. It’s a tool suite basic monitoring, managing, and production time profiling and diagnostics with high performance. Java Mission Control minimizes the performance overhead that's usually an issue with profiling tools. 
 Java mission control was run for the driver program and data about memory and processor usage was captured 
 Command : jmc
 
