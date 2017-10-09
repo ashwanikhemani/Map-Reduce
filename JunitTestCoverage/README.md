@@ -22,6 +22,10 @@ mvn emma:mvn emma:emma -Dmaven.emma.report.xml=true
 2. The JunitTestCoverage application is used to create a program using the map/reduce model for parallelizing software testing .
 
 JunitTestCoverage : This class results in mapping the line number of different classes with the junits they are covered by 
+
+The input to the above application is the coverage reports , the mapper computes the line numbers and test name corresponding to 
+the lines and gives the it to the reducer to give the list of junit test for a line number 
+
 JunitTestCoverageSorted : This class give the results sorted line of codes by the number of junit that cover them in descending order .
 
 3. The above application was then tested on cloudera platform with hadoop installation using below steps :
