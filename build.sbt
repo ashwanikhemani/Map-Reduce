@@ -17,13 +17,5 @@ libraryDependencies ++= Seq("junit" % "junit" % "4.12" % "test",
 
 libraryDependencies += "com.novocode" % "junit-interface" % "0.11" % "test"
 
-lazy val jacoco = Seq(
-  jacocoReportSettings in Test := JacocoReportSettings()
-    withFormats(JacocoReportFormats.HTML)
-)
-lazy val jacoco = Seq(
-  jacocoIncludes in Test := jacocoIncludes()
-    withFormats(JacocoReportFormats.HTML)
-)
 
-mainClass in Compile := Some("org.joda.time.DateTimeZone.Provider")
+
